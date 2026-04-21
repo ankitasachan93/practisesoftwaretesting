@@ -7,6 +7,7 @@ setup("Create customer 01 auth", async ({ page, context }) => {
 
   await page.goto("https://practicesoftwaretesting.com/auth/login");
 
+  page.waitForLoadState("networkidle")
   await page.getByTestId("email").fill(email);
   await page.getByTestId("password").fill(password);
   await page.getByTestId("login-submit").click();
