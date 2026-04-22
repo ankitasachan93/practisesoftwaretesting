@@ -25,7 +25,8 @@ test.describe('Login Flow' , () =>{
         await loginpage.login(email,password);
         await expect(page.getByTestId("nav-menu")).toContainText("Ankita Sachan");
 
-    })
+    })                          
+
 
     test.describe('Home page search for Thor Hammer', () =>{
         test('Search assertion', async({page})=>{
