@@ -8,7 +8,7 @@ setup("Create customer 01 auth", async ({ page, context }) => {
   const password = "welcome01";
   const customer01AuthFile = ".auth/customer01.json";
 
-  await page.goto("https://practicesoftwaretesting.com/auth/login");
+  await page.goto("/auth/login");
 
   await page.getByTestId("email").waitFor({ state: "visible" });
   await page.getByTestId("email").fill(email);
