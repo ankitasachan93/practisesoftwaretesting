@@ -1,4 +1,7 @@
 import { test as setup, expect } from "@playwright/test";
+import fs from "fs";
+
+fs.mkdirSync(".auth", { recursive: true });
 
 setup("Create customer 01 auth", async ({ page, context }) => {
   const email = "customer@practicesoftwaretesting.com";
